@@ -16,14 +16,7 @@ namespace StolenBikes.Api.Controllers
         {
             _stolenBikesCityCountService = stolenBikesCityCountService;
         }
-        
-        [HttpGet("{cityName}")]
-        public IActionResult GetStolenBikesCityCount(string cityName)
-        {
-            var stolenBikesCityCount = _stolenBikesCityCountService.GetStolenBikesCityCount(cityName);
-            return Ok(stolenBikesCityCount);
-        }
-        
+
         [HttpGet]
         public IActionResult GetStolenBikesCityCountList()
         {
